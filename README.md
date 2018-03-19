@@ -1,4 +1,3 @@
 # CS506
-Economic Recessions’ Effect on Educational Activity 
-Hi
+Economic Recessions’ Effect on Educational Activity
 
