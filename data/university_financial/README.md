@@ -1,3 +1,5 @@
+The data file is "university_financial0116.csv"
+
 The data in this file was originaly acquired from https://nces.ed.gov/ipeds/Home/UseTheData. 
 
 The data describes 4 financial variables for the three different types of educational
