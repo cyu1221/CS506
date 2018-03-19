@@ -1,0 +1,41 @@
+import pandas as pd
+
+F_pu = pd.read_csv("public0116.csv")
+F_pr = pd.read_csv("for_profit9916.csv")
+F_npr = pd.read_csv("not_for_profit9916.csv")
+
+F_pu['TYPE']  = "public"
+F_pr['TYPE']  = "for-profit"
+F_npr['TYPE'] = "not-for-profit"
+
+F = F_pr.append(F_npr)
+F = F.append(F_pu)
+F = F.drop(['0001_ASSETS', '0001_EXPENSES', '0001_RESEARCH', '0001_REVENUE', '9900_ASSETS', '9900_EXPENSES', '9900_RESEARCH', '9900_REVENUE'], axis=1)
+
+F = F[['UNITID', 'TYPE', 
+	   '1516_ASSETS', '1516_EXPENSES', '1516_REVENUE', '1516_RESEARCH',
+	   '1415_ASSETS', '1415_EXPENSES', '1415_REVENUE', '1415_RESEARCH',
+	   '1314_ASSETS', '1314_EXPENSES', '1314_REVENUE', '1314_RESEARCH',
+	   '1213_ASSETS', '1213_EXPENSES', '1213_REVENUE', '1213_RESEARCH',
+	   '1112_ASSETS', '1112_EXPENSES', '1112_REVENUE', '1112_RESEARCH',
+	   '1011_ASSETS', '1011_EXPENSES', '1011_REVENUE', '1011_RESEARCH',
+	   '0910_ASSETS', '0910_EXPENSES', '0910_REVENUE', '0910_RESEARCH',
+	   '0809_ASSETS', '0809_EXPENSES', '0809_REVENUE', '0809_RESEARCH',
+	   '0708_ASSETS', '0708_EXPENSES', '0708_REVENUE', '0708_RESEARCH',
+	   '0607_ASSETS', '0607_EXPENSES', '0607_REVENUE', '0607_RESEARCH',
+	   '0506_ASSETS', '0506_EXPENSES', '0506_REVENUE', '0506_RESEARCH',
+	   '0405_ASSETS', '0405_EXPENSES', '0405_REVENUE', '0405_RESEARCH',
+	   '0304_ASSETS', '0304_EXPENSES', '0304_REVENUE', '0304_RESEARCH',
+	   '0203_ASSETS', '0203_EXPENSES', '0203_REVENUE', '0203_RESEARCH',
+	   '0102_ASSETS', '0102_EXPENSES', '0102_REVENUE', '0102_RESEARCH',]]
+
+print('---------F---------')
+print(F.columns)
+print(F.shape)
+print('--------------------')
+
+
+F.to_csv('./university_financial0116.csv')
+
+
+
