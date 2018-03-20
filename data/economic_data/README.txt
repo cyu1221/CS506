@@ -22,3 +22,6 @@ Unemployment.csv
 	The rows contain monthly data with a single variable representing the relative purchasing 	power of the consumer dollar and the unemployment rate for college graduates having a 	bachelor’s degree or higher, aged 25 and above. 
 
 All Data files contain data from 1992-2018
+
+Financial_Graphs.py plots a timeseries with formatted gridlines
+Financial_Graphsbook.ipynb creates graphs of all of the data files
