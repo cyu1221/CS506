@@ -9,13 +9,13 @@ years = YearLocator()  # every year
 months = MonthLocator()  # every month
 yearsFmt = DateFormatter('%Y')
 
-quotes = pd.read_csv('^RUT.csv',
+quotes = pd.read_csv('TNX_log_returns.csv',
                      index_col=0,
                      parse_dates=True,
                      infer_datetime_format=True)
 
 dates = quotes.index
-opens = quotes['open']
+opens = quotes['Log Returns']
 
 fig, ax = plt.subplots()
 ax.plot_date(dates, opens, '-')
@@ -37,6 +37,6 @@ ax.fmt_ydata = price
 ax.grid(True)
 
 fig.autofmt_xdate()
-plt.title('Unemployment Rate for Bachelor or Above, Age 25+ 1992-2018')
+plt.title('Logged Percent Change CBOE 10yr Bond Yields')
 plt.show()
 
