@@ -1,0 +1,2 @@
+#_of_training_samples,#_of_test_samples_,lr,epochs,batch,binary_crossentropy,accuracy
+1107,474,1e-05,500,64,0.578445860856696,0.7046413494564813
