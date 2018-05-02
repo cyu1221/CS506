@@ -7,4 +7,4 @@ The goal of our project is to find out how economic recessions affect educationa
 <p>Under /Report, you can find our report</p>
 <p>Under /notebook, you can find a note book that recreates all of our results in the report.</p>
 
-The other directories in this project are the original implementation that produced our results (/notebook recreates these results). 
+The other directories in this project are the original implementations that produced our results (/notebook recreates these results). 
